@@ -12,11 +12,11 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, Book $book)
     {
-    $books = Book::all();
-        return view('books',compact('books'));
-    }
+    $books = Book::all(); 
+    return view('dashboard',compact('book'));
+        }
 
     /**
      * Show the form for creating a new resource.
@@ -73,7 +73,7 @@ class BookController extends Controller
      */
     public function show(Book $book)
     {
-        //
+         return view('manual',compact('book'));
     }
 
     /**

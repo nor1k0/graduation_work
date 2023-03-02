@@ -15,8 +15,43 @@
   <div class="container px-5 py-24 mx-auto">
   <label class="block uppercase tracking-wide text-gray-700 text-xl font-bold mb-2 my-20">
         <br>過去に作成したマニュアル
-        </label>              
-      
+        </label>
+        
+        >
+
+    
+            @foreach ($books as $book)
+                <!-- 本: 削除ボタン -->
+                <div class="flex justify-between p-4 items-center bg-blue-500 text-white rounded-lg border-2 border-white">
+                  <div>{{ $book->title }}</div>
+                  
+                    <div>
+                    <form action="{{ url('books/'.$book->id.'/edit') }}" method="GET">
+                         @csrf
+                         
+                        <button type="submit"  class="btn bg-blue-500 rounded-lg">
+                            更新
+                        </button>
+                        
+                     </form>
+                  </div>
+                  
+                  <div>
+                    <form action="{{ url('books/'.$book->id) }}" method="POST">
+                         @csrf
+                         @method('DELETE')
+                        
+                        <button type="submit"  class="btn bg-blue-500 rounded-lg">
+                            削除
+                        </button>
+                        
+                     </form>
+                  </div>
+                
+                </div>
+            @endforeach
+    
+
     <div class="flex flex-wrap -m-4">
       <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
