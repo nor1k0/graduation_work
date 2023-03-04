@@ -12,10 +12,10 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, Book $book)
+    public function index(Book $book)
     {
     $books = Book::all(); 
-    return view('dashboard',compact('book'));
+    return view('mypage',compact('books'));
         }
 
     /**
@@ -23,14 +23,14 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Book $book)
     {
-        //
+    return view('create',compact('book'));
     }
 
     /**
      * Store a newly created resource in storage.
-     *
+     *l.
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
@@ -97,11 +97,10 @@ class BookController extends Controller
     public function update(Request $request, Book $book)
     {
             $updateData = $request->validate([
-            'title' => 'required|max:255',
-            'body' => 'required|max:255',
+             'title' => 'required|max:255',
         ]);
         $book->update($updateData);
-        return redirect('/books');
+        return redirect('books');
     }
 
     /**

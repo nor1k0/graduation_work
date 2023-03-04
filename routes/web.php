@@ -23,15 +23,15 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
 // Book用の一括ルーティング
 Route::resource('books', BookController::class);
-
 
 // プレミア会員用のルーティング
 Route::group(['middleware' => ['auth', 'can:premier']], function () {
 
-	// Book用の一括ルーティング
-  Route::resource('books', BookController::class);
+// Book用の一括ルーティング
+ Route::resource('books', BookController::class);
   
 });
 
