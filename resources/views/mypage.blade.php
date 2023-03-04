@@ -29,13 +29,26 @@
           <div class="p-6">
             <!--<h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>-->
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->title}}</h1>
+            
             <div class="flex items-center flex-wrap ">
+             
+             <div class="flex justify-between p-4 items-center bg-blue-500 text-white rounded-lg border-2 border-white">
+            <div>
+            <form action="{{ url('books/'.$book->id.'') }}" method="GET">
+                         @csrf
+                        <button type="submit"  class="btn bg-blue-500 rounded-lg">
+                            確認
+                        </button>
+                     </form>
+              </div>
+            </div>
+          
             <div class="flex justify-between p-4 items-center bg-blue-500 text-white rounded-lg border-2 border-white">
             <div>
             <form action="{{ url('books/'.$book->id.'/edit') }}" method="GET">
                          @csrf
                         <button type="submit"  class="btn bg-blue-500 rounded-lg">
-                            更新・公開
+                            編集
                         </button>
                      </form>
               </div>
