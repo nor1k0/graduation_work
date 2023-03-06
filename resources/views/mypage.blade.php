@@ -19,7 +19,7 @@
         
 
          @if (count($books) > 0)
-      　<div class="grid grid-cols-4 gap-4" style="grid-template-columns:repeat(4,minmax(0,1fr));">
+      　<div class="grid grid-cols-4 gap-4" style="grid-template-columns:repeat(3,minmax(0,1fr));">
             @foreach ($books as $book)
         <div class="col-span-1">
         <div class="flex d-flex-wrap -m-4">
@@ -48,7 +48,7 @@
             <form action="{{ url('books/'.$book->id.'/edit') }}" method="GET">
                          @csrf
                         <button type="submit"  class="btn bg-blue-500 rounded-lg">
-                            編集
+                            編集・公開
                         </button>
                      </form>
               </div>
@@ -65,6 +65,12 @@
             </form>
           </div>
          </div>
+         
+         @if($book->flag_open =='1')
+         公開中
+         @else
+         @endif
+         
         </div>
        </div>
       </div>

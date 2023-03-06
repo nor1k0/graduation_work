@@ -34,6 +34,16 @@
             <!-- 本のタイトル -->
             <form action="{{ url('books') }}" method="POST"  enctype="multipart/form-data" class="w-3/4">
                 @csrf
+                
+                 <div class="form-check form-check-inline">
+                 <input type="radio" name="flag_open" class="form-check-input" id="release1" value="0" {{ old ('release') == '0' ? 'checked' : '' }} checked>
+                 <label for="release1" class="form-check-label">非公開</label>
+                 </div>
+                 <div class="form-check form-check-inline">
+                 <input type="radio" name="flag_open" class="form-check-input" id="release2" value="1" {{ old ('release') == '1' ? 'checked' : '' }}>
+                 <label for="release2" class="form-check-label">公開</label>
+                 </div>     
+    
                   <div class="flex flex-col px-2 py-2">
                    <!-- カラム１ -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">

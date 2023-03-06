@@ -20,7 +20,7 @@ Route::get('/', function () {
 })->name('welcome');;
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('mypage');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -34,6 +34,7 @@ Route::group(['middleware' => ['auth', 'can:premier']], function () {
  Route::resource('books', BookController::class);
   
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

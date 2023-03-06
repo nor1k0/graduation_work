@@ -4,7 +4,7 @@
     <!--ヘッダー[START]-->
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('') }}
+            {{ __('マニュアルの確認') }}
         </h2>
     </x-slot>
     <!--ヘッダー[END]-->
@@ -12,8 +12,14 @@
     <!--全エリア[START]-->
     <div class="flex bg-gray-100">
     
+    
     <!--右側エリア[START]-->
     <div class="flex-1 text-gray-700 text-left bg-blue-100 px-4 py-2 m-2">
+
+    
+    <form action="{{ url('books/'.$book->id) }}" method="POST"  enctype="multipart/form-data" class="w-full max-w-lg">
+    @method('PATCH')
+     @csrf
          <label class="block uppercase tracking-wide text-gray-700 text-xl font-bold mb-2">
       {{$book->title}}
         </label>
