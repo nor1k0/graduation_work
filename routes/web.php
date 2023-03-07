@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;//追記
+use App\Http\Controllers\ListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use App\Http\Controllers\BookController;//追記
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');;
+
+Route::get('/',[ListController::class,'list']);
+
 
 Route::get('/dashboard', function () {
     return view('mypage');
@@ -31,7 +32,7 @@ Route::resource('books', BookController::class);
 Route::group(['middleware' => ['auth', 'can:premier']], function () {
 
 // Book用の一括ルーティング
- Route::resource('books', BookController::class);
+Route::resource('books', BookController::class);
   
 });
 
