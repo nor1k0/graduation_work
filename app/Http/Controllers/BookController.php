@@ -41,7 +41,7 @@ class BookController extends Controller
             'title' => 'required|max:255',
             's1_title' => 'required|max:255',
             's1_body' => 'required|max:255',
-            
+            'flag_open' => 'required',
         ]);
         
         // newにして上書きできる状態が望ましい(createで保存が)
@@ -96,25 +96,30 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-            $updateData = $request->validate([
+            $updateData = $request
+            
+            ->validate([
             'title' => 'required|max:255',
             's1_title' => 'required|max:255',
             's1_body' => 'required|max:255',
-            
+            'flag_open' => 'required',
         ]);
+         
             // アップロードされたファイル名を取得
-    // $file_name = $request->file('s1_img')->getClientOriginalName();
-    //     if (isset($file_name)) {
-    //   $dir = 'sample';
-    //     // 取得したファイル名で保存
-    //     $request->file('s1_img')->storeAs('public/' . $dir, $file_name);
-    //     $books->s1_img_name = $file_name;
-    //     $books->s1_img = 'storage/' . $dir . '/' . $file_name;
-    //     $books->update();
-    //     }
-        
+           $file_name = $request->file('s1_img')->getClientOriginalName();
+          if (isset($file_name)) {
+          $dir = 'sample';
+         // 取得したファイル名で保存
+         $request->file('s1_img')->storeAs('public/' . $dir, $file_name);
+         $book->s1_img_name = $file_name;
+         $book->s1_img = 'storage/' . $dir . '/' . $file_name;
+         $book->update();
+         }
+      
         $book->update($updateData);
         return redirect('/books');
+
+    
     }
 
     /**
