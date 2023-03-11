@@ -17,7 +17,7 @@ use App\Http\Controllers\ListController;
 */
 
 
-Route::get('/',[ListController::class,'list']);
+Route::get('/',[ListController::class,'index']);
 
 
 Route::get('/dashboard', function () {

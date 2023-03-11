@@ -58,11 +58,32 @@
                                    ・人気の投稿<br>
                                    ・注目の投稿
                                 </div>
-                            </div>
                         </div>
-                                </div>
-                            </div>
-                                    <tbody>
+                        </div>
+                    　　</div>
+                    　　</div>
+                    　　
+                    　　<!--検索-->
+                    　　<form method="GET" action="{{ url('/') }}">
+                        <input type="search" placeholder="キーワードを入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+                        <div>
+       　　　　　　　　　　　　　　 <button type="submit">検索</button>
+        　　　　　　　　　　　　<button>
+           　　　　　　　　　　 <a href="{{ url('/') }}" class="text-white">
+    　　　　　　　            クリア
+    　　　　　　　　　　　        </a>
+   　　　　　　　　　　　　　　　     </button>
+   　　　　　　　　　　　　　　　　 </div>
+　　　　　　　　　　　　</form>
+
+    @foreach($books as $book)
+    <a href="/books/{{$book->id }}">
+        {{ $book->title }}
+    </a>
+    @endforeach
+                    　　
+                    　　
+        <tbody>
         @foreach($books as $book)
         @if($book->flag_open =='1')
    <div class="grid grid-cols-4 gap-4" style="grid-template-columns:repeat(3,minmax(0,1fr));">
@@ -90,9 +111,7 @@
   </div>
   @endif
   @endforeach
-</div>
-            </div>
-                  </div>
-            </div>
+
+
     </body>
 </html>
