@@ -18,6 +18,8 @@ use App\Http\Controllers\ListController;
 
 
 Route::get('/',[ListController::class,'index']);
+Route::get('/manual/{book}',[ListController::class,'show']);
+
 
 
 Route::get('/dashboard', function () {
@@ -28,13 +30,13 @@ Route::get('/dashboard', function () {
 // Book用の一括ルーティング
 Route::resource('books', BookController::class);
 
-// プレミア会員用のルーティング
-Route::group(['middleware' => ['auth', 'can:premier']], function () {
+// // プレミア会員用のルーティング
+// Route::group(['middleware' => ['auth', 'can:premier']], function () {
 
-// Book用の一括ルーティング
-Route::resource('books', BookController::class);
+// // Book用の一括ルーティング
+// Route::resource('books', BookController::class);
   
-});
+// });
 
 
 Route::middleware('auth')->group(function () {

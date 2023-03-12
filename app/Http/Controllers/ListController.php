@@ -22,9 +22,11 @@ class ListController extends Controller
         
         // $books = Book::all();
         return view('welcome', compact('books'));
-// 　　// 検索フォームで入力された値を取得する
-//     // $search = $books->input('search');
-        
-//         //
+    }
+    
+    public function show(Request $request ,Book $book)
+    {
+         $books = Book::all();
+         return view('open',compact('book'));
     }
 }
