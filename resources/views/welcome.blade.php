@@ -52,7 +52,9 @@
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-m">
                                  @foreach ($books as $book)
+                                  @if($book->flag_open =='1')
                                   <a href="{{ url('manual/'.$book->id.'') }}">★{{ $book->title }} (更新日) {{ $book->updated_at }}</a><br>
+                                @endif
                                 @endforeach
                                 </div>
                         </div>
