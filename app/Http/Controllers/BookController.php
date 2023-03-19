@@ -137,7 +137,7 @@ class BookController extends Controller
             'title' => 'required|max:255',
             's1_title' => 'required|max:255',
             's1_body' => 'required|max:255',
-            // 'flag' => 'required',
+            'flag_open' => 'required',
         ]);
          
     $file_name = '';
