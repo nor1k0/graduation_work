@@ -68,6 +68,7 @@
       </div>
       </div>
       
+      @if(!is_null($book->s4_body))
       <div class="flex flex-wrap -m-4">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -82,7 +83,9 @@
         </div>
       </div>
       </div>
+      @endif
       
+    @if(!is_null($book->s5_body))
       <div class="flex flex-wrap -m-4">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -97,7 +100,7 @@
         </div>
       </div>
       </div>
-    
+      @endif
     
     
     

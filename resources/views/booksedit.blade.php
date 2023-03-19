@@ -81,7 +81,7 @@
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s1_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -108,7 +108,7 @@
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s2_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -135,7 +135,7 @@
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s3_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -162,7 +162,7 @@
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s4_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -189,7 +189,7 @@
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s5_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -271,6 +271,7 @@
         </div>
       </div>
       
+      @if(!is_null($book->s4_body))
       <div class="flex flex-wrap -m-4">
         <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -287,7 +288,9 @@
           </div>
         </div>
       </div>
+      @endif
       
+        @if(!is_null($book->s5_body))
       <div class="flex flex-wrap -m-4">
         <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
@@ -304,7 +307,7 @@
           </div>
         </div>
       </div>
-       
+       @endif   
     </div>
     <!--右側エリア[[END]--> 
     

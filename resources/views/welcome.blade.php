@@ -46,13 +46,14 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a class="text-gray-900 dark:text-white">人気の</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a class="text-gray-900 dark:text-white">最新の投稿</a></div>
                             </div>
 
                             <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                   ・人気の投稿<br>
-                                   ・注目の投稿
+                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-m">
+                                 @foreach ($books as $book)
+                                  <a href="{{ url('manual/'.$book->id.'') }}">★{{ $book->title }} (更新日) {{ $book->updated_at }}</a><br>
+                                @endforeach
                                 </div>
                         </div>
                         </div>
@@ -61,7 +62,7 @@
                     　　
                     　　<!--検索-->
 　　　　　　　　　　　　<link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
-
+　　　　　　　　　　　　
                         <!-- This is an example component -->
                         <div class="max-w-2xl mx-auto">
                         

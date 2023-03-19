@@ -41,6 +41,14 @@ class BookController extends Controller
             'title' => 'required|max:100',
             's1_title' => 'required|max:100',
             's1_body' => 'required|max:200',
+            's2_title' => 'required|max:100',
+            's2_body' => 'required|max:200',
+            's3_title' => 'required|max:100',
+            's3_body' => 'required|max:200',
+            's4_title' => 'max:100',
+            's4_body' => 'max:200',
+            's5_title' => 'max:100',
+            's5_body' => 'max:200',
             'flag_open' => 'required',
         ]);
         

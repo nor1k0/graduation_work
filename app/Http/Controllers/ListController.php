@@ -20,6 +20,8 @@ class ListController extends Controller
             $books = Book::all();
         }
         
+        $books = Book::latest('updated_at')->take(5)->get();
+        
         // $books = Book::all();
         return view('welcome', compact('books'));
     }
