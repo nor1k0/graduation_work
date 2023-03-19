@@ -13,7 +13,7 @@ class Book extends Model
     's3_title','s3_body','s3_img','s3_img_name',
     's4_title','s4_body','s4_img','s4_img_name',
     's5_title','s5_title','s5_img','s5_img_name',
-    'flag_open','favorite'
+    'flag_open','favorite','user_id'
     ]; //これを追加！
     
     public function likes()

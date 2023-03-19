@@ -42,14 +42,15 @@ class BookController extends Controller
             's1_title' => 'required|max:100',
             's1_body' => 'required|max:200',
             's2_title' => 'required|max:100',
-            's2_body' => 'required|max:200',
-            's3_title' => 'required|max:100',
-            's3_body' => 'required|max:200',
-            's4_title' => 'max:100',
-            's4_body' => 'max:200',
-            's5_title' => 'max:100',
-            's5_body' => 'max:200',
+            //  's2_body' => 'required|max:200',
+             's3_title' => 'required|max:100',
+             's3_body' => 'required|max:200',
+            // 's4_title' => 'max:100',
+            // 's4_body' => 'max:200',
+            // 's5_title' => 'max:100',
+            // 's5_body' => 'max:200',
             'flag_open' => 'required',
+             'user_id' => 'required',
         ]);
         
         // newにして上書きできる状態が望ましい(createで保存が)
@@ -59,6 +60,7 @@ class BookController extends Controller
         $dir = 'sample';
         
         // アップロードされたファイル名を取得
+        if ($request->hasFile('s1_img')) {
         $file_name = $request->file('s1_img')->getClientOriginalName();
 
         // 取得したファイル名で保存
@@ -68,6 +70,33 @@ class BookController extends Controller
          $books->s1_img_name = $file_name;
          $books->s1_img = 'storage/' . $dir . '/' . $file_name;
          $books->save();
+        }
+        
+         // アップロードされたファイル名を取得
+        if ($request->hasFile('s2_img')) {
+        $file_name = $request->file('s2_img')->getClientOriginalName();
+
+        // 取得したファイル名で保存
+        $request->file('s2_img')->storeAs('public/' . $dir, $file_name);
+        
+        // $image = new Image(); 
+         $books->s1_img_name = $file_name;
+         $books->s1_img = 'storage/' . $dir . '/' . $file_name;
+         $books->save();
+        }
+        
+         // アップロードされたファイル名を取得
+        if ($request->hasFile('s3_img')) {
+        $file_name = $request->file('s3_img')->getClientOriginalName();
+
+        // 取得したファイル名で保存
+        $request->file('s3_img')->storeAs('public/' . $dir, $file_name);
+        
+        // $image = new Image(); 
+         $books->s1_img_name = $file_name;
+         $books->s1_img = 'storage/' . $dir . '/' . $file_name;
+         $books->save();
+        }
         
         return redirect('/books');
     
@@ -114,11 +143,31 @@ class BookController extends Controller
         ]);
          
             // アップロードされたファイル名を取得
-           $file_name = $request->file('s1_img')->getClientOriginalName();
           if (isset($file_name)) {
+               $file_name = $request->file('s1_img')->getClientOriginalName();
           $dir = 'sample';
          // 取得したファイル名で保存
          $request->file('s1_img')->storeAs('public/' . $dir, $file_name);
+         $book->s1_img_name = $file_name;
+         $book->s1_img = 'storage/' . $dir . '/' . $file_name;
+         $book->update();
+         }
+         
+                  if (isset($file_name)) {
+               $file_name = $request->file('s2_img')->getClientOriginalName();
+          $dir = 'sample';
+         // 取得したファイル名で保存
+         $request->file('s2_img')->storeAs('public/' . $dir, $file_name);
+         $book->s1_img_name = $file_name;
+         $book->s1_img = 'storage/' . $dir . '/' . $file_name;
+         $book->update();
+         }
+         
+                  if (isset($file_name)) {
+               $file_name = $request->file('s3_img')->getClientOriginalName();
+          $dir = 'sample';
+         // 取得したファイル名で保存
+         $request->file('s3_img')->storeAs('public/' . $dir, $file_name);
          $book->s1_img_name = $file_name;
          $book->s1_img = 'storage/' . $dir . '/' . $file_name;
          $book->update();

@@ -18,9 +18,10 @@
         </label>
         
 
-         @if (count($books) > 0)
+        
       　<div class="grid grid-cols-4 gap-4" style="grid-template-columns:repeat(3,minmax(0,1fr));">
             @foreach ($books as $book)
+            @if(Auth::check() && Auth::user()->id == $book->user_id)
         <div class="col-span-1">
         <div class="flex d-flex-wrap -m-4">
         <div class="p-4 ">
@@ -75,9 +76,9 @@
   </div>
   </div>
   </div>
+  @endif
   @endforeach
 </div>
-@endif
     
 
 </section>

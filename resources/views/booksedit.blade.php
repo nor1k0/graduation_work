@@ -140,59 +140,59 @@
                       <input name="s3_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
                     
-                     <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>
+                    <!-- <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>-->
                     <!-- カラム2 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">
-                       ステップ4
-                      </label>
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       見出し
-                      </label>
-                      <input name="s4_title" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s4_title}}" type="text" placeholder="">
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">-->
+                    <!--   ステップ4-->
+                    <!--  </label>-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   見出し-->
+                    <!--  </label>-->
+                    <!--  <input name="s4_title" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s4_title}}" type="text" placeholder="">-->
+                    <!--</div>-->
                     <!-- カラム3 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       本文
-                      </label>
-                      <input  id="s4_body" name="s4_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s4_body}}" type="text" placeholder="" maxlength="200">
-                     <span id="s4_counter"></span>
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   本文-->
+                    <!--  </label>-->
+                    <!--  <input  id="s4_body" name="s4_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s4_body}}" type="text" placeholder="" maxlength="200">-->
+                    <!-- <span id="s4_counter"></span>-->
+                    <!--</div>-->
                      <!-- カラム3 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像　※必須
-                      </label>
-                      <input name="s4_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   画像　※必須-->
+                    <!--  </label>-->
+                    <!--  <input name="s4_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">-->
+                    <!--</div>-->
                     
-                     <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>
+                    <!-- <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>-->
                     <!-- カラム2 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">
-                       ステップ5
-                      </label>
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       見出し
-                      </label>
-                      <input name="s5_title" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s5_title}}" type="text" placeholder="">
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-s font-bold mb-2">-->
+                    <!--   ステップ5-->
+                    <!--  </label>-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   見出し-->
+                    <!--  </label>-->
+                    <!--  <input name="s5_title" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" value="{{$book->s5_title}}" type="text" placeholder="">-->
+                    <!--</div>-->
                     <!-- カラム3 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       本文
-                      </label>
-                      <input id="s5_body" name="s5_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value="{{$book->s5_body}}" placeholder="" maxlength="200">
-                     <span id="s5_counter"></span>
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   本文-->
+                    <!--  </label>-->
+                    <!--  <input id="s5_body" name="s5_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" value="{{$book->s5_body}}" placeholder="" maxlength="200">-->
+                    <!-- <span id="s5_counter"></span>-->
+                    <!--</div>-->
                      <!-- カラム3 -->
-                    <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
-                      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像　※必須
-                      </label>
-                      <input name="s5_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
-                    </div>
+                    <!--<div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">-->
+                    <!--  <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">-->
+                    <!--   画像　※必須-->
+                    <!--  </label>-->
+                    <!--  <input name="s5_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">-->
+                    <!--</div>-->
 
                     
                                       
