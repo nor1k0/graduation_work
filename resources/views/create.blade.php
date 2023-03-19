@@ -1,4 +1,5 @@
 <!-- resources/views/books.blade.php -->
+<script type="module" src="{{ asset('build/assets/test.js') }}"></script>
 <x-app-layout>
 
     <!--ヘッダー[START]-->
@@ -67,12 +68,13 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input name="s1_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="">
+                      <input id="s1_body" name="s1_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                    　<span id="s1_counter"></span>
                     </div>
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s1_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -93,12 +95,13 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input name="s2_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="">
+                      <input id="s2_body"　name="s2_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                    <span id="s2_counter"></span>
                     </div>
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s2_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -119,12 +122,13 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input name="s3_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="">
+                      <input id="s3_body" name="s3_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                     <span id="s3_counter"></span>
                     </div>
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s3_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -145,12 +149,13 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input name="s4_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="">
+                      <input id="s4_body" name="s4_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                     <span id="s4_counter"></span>
                     </div>
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s4_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>
@@ -171,12 +176,13 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input name="s5_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="">
+                      <input id="s5_body" name="s5_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                    <span id="s5_counter"></span>
                     </div>
                      <!-- カラム3 -->
                     <div class="w-full md:w-1/1 px-3 mb-2 md:mb-0">
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
-                       画像
+                       画像　※必須
                       </label>
                       <input name="s5_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
                     </div>

@@ -23,7 +23,7 @@
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <div class=" fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/books') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">マイページ</a>
                     @else
@@ -38,7 +38,7 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                        <img src="{{ asset("storage/sample/3minutes_logo.png") }}" width="30%" height="auto">
+                        <img src="{{ asset("storage/3minutes_logo.png") }}" width="30%" height="auto">
                 </div>
 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
@@ -46,7 +46,7 @@
                         <div class="p-6">
                             <div class="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a class="text-gray-900 dark:text-white">Information</a></div>
+                                <div class="ml-4 text-lg leading-7 font-semibold"><a class="text-gray-900 dark:text-white">人気の</a></div>
                             </div>
 
                             <div class="ml-12">

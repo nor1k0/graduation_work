@@ -12,8 +12,8 @@
     新しいマニュアルの作成
     </button>
   <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto ">
-  <label class="block uppercase tracking-wide text-gray-700 text-xl font-bold mb-2 my-20">
+  <div class="container px-5 mx-auto ">
+  <label class="block uppercase tracking-wide text-gray-700 text-xl font-bold mb-2">
         <br>過去に作成したマニュアル
         </label>
         
@@ -23,7 +23,7 @@
             @foreach ($books as $book)
         <div class="col-span-1">
         <div class="flex d-flex-wrap -m-4">
-        <div class="p-4 md:w-1/3">
+        <div class="p-4 ">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{asset($book->s1_img)}}" alt="no image"  style="width:250px;height:auto" >
           <div class="p-6">
@@ -65,15 +65,15 @@
             </form>
           </div>
          </div>
-         
          @if($book->flag_open =='1')
          公開中
          @else
          @endif
          
-       </div>
       </div>
      </div>
+  </div>
+  </div>
   </div>
   @endforeach
 </div>
@@ -82,9 +82,8 @@
 
 </section>
 
-        </div>
     </div>
-    
+    </div>
     </div>
     <!--右側エリア[[END]--> 
     

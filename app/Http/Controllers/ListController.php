@@ -29,4 +29,21 @@ class ListController extends Controller
          $books = Book::all();
          return view('open',compact('book'));
     }
+    
+     public function favorite(Book $book)
+{
+    return $this->belongsToMany(User::class, 'favorite');
+
+    $book->favorite()->attach(auth()->user()->id);
+    return back();
+}
+    
+    public function unfavorite(Book $book)
+{
+        $likes = $book->favorite;
+    $isLiked = LikeHelper::isLikedBy($book, auth()->user());
+    $book->favorit()->detach(auth()->user()->id);
+    return back();
+}
+
 }

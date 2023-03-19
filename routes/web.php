@@ -17,9 +17,9 @@ use App\Http\Controllers\ListController;
 */
 
 
-Route::get('/',[ListController::class,'index']);
+Route::get('/',[ListController::class,'index'])->name('welcome');;
 Route::get('/manual/{book}',[ListController::class,'show']);
-
+Route::post('/manual/{book}',[ListController::class, 'favorite'])->name('list.favorite');
 
 
 Route::get('/dashboard', function () {
@@ -31,12 +31,12 @@ Route::get('/dashboard', function () {
 Route::resource('books', BookController::class);
 
 // // プレミア会員用のルーティング
-// Route::group(['middleware' => ['auth', 'can:premier']], function () {
+ Route::group(['middleware' => ['auth', 'can:premier']], function () {
 
 // // Book用の一括ルーティング
-// Route::resource('books', BookController::class);
+ Route::resource('books', BookController::class);
   
-// });
+ });
 
 
 Route::middleware('auth')->group(function () {

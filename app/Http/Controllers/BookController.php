@@ -38,9 +38,9 @@ class BookController extends Controller
     public function store(Request $request)
     {
          $storeData = $request->validate([
-            'title' => 'required|max:255',
-            's1_title' => 'required|max:255',
-            's1_body' => 'required|max:255',
+            'title' => 'required|max:100',
+            's1_title' => 'required|max:100',
+            's1_body' => 'required|max:200',
             'flag_open' => 'required',
         ]);
         
@@ -133,4 +133,13 @@ class BookController extends Controller
     $book->delete();
         return redirect('/books');
     }
+    
+         public function favorite(Book $book)
+{
+    return $this->belongsToMany(User::class, 'favorite');
+
+    $book->favorite()->attach(auth()->user()->id);
+    return back();
+}
+
 }
