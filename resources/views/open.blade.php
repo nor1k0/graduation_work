@@ -38,7 +38,7 @@
           <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s2_img)}}" alt="No image"style="width:250px;height:auto">
         </div>
       </div>
-      <div class="p-4 md:w-1/3">
+      <div class="p-4 md:w-1/3" style="margin-left: 50px;">
             <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ2</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s2_title}}</h1>
@@ -53,7 +53,7 @@
           <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s3_img)}}" alt="No image"style="width:250px;height:auto">
         </div>
       </div>
-      <div class="p-4 md:w-1/3">
+      <div class="p-4 md:w-1/3" style="margin-left: 50px;">
             <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ3</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s3_title}}</h1>
