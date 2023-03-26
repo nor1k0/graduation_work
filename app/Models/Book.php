@@ -16,8 +16,9 @@ class Book extends Model
     'flag_open','favorite','user_id'
     ]; //これを追加！
     
-    public function likes()
+    public function favorite()
     {
         return $this->belongsToMany(User::class, 'favorite')->withTimestamps();
+        // return $this->belongsToMany(User::class, 'favorite', 'user_id', 'favorite_id')->withTimestamps();
     }
 }

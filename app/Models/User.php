@@ -8,6 +8,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Book;
+use App\Models\Favorite;
 
 class User extends Authenticatable
 {
@@ -43,8 +45,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
     
-        public function likes()
+        public function favorite()
     {
         return $this->hasMany(Book::class, 'favorite')->withTimestamps();
+    }
+    
+        public function hasFavorite($book)
+    {
+    Favorite::where('user_id', $this->id)->where('book_id', $book->id)->exists();
     }
 }

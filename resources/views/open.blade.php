@@ -11,7 +11,7 @@
     <div class="flex-1 text-gray-700 text-left bg-blue-100 px-4 py-2 m-2">
      <div id="timer"></div>
     
-    <form action="{{ url('books/'.$book->id) }}" method="POST"  enctype="multipart/form-data" class="w-full max-w-lg">
+    <<div class="w-full max-w-lg">
     @method('PATCH')
      @csrf
          <label class="block uppercase tracking-wide text-gray-700 text-4xl font-bold mb-2" style="font-size: 4rem;">
@@ -97,12 +97,13 @@
       @endif
     
     
-<!--  <form method="POST" action="{{ route('list.favorite', ['book' => $book->id]) }}">-->
-<!--    @csrf-->
-<!--    <button type="submit" class="btn btn-primary">-->
-<!--            いいね-->
-<!--    </button>-->
-<!--</form>-->
+    <form method="POST" action="{{ route('list.favorite', ['book' => $book->id]) }}">   
+    @csrf
+     <button type="submit" class="btn btn-primary">
+    いいね
+    </button>
+    </form>
+    </div>
     
     
     </div>
