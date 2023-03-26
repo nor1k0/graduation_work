@@ -47,11 +47,13 @@ class User extends Authenticatable
     
         public function favorite()
     {
-        return $this->hasMany(Book::class, 'favorite')->withTimestamps();
+        // return $this->hasMany(Book::class, 'favorites')->withTimestamps();
+        return $this->belongsToMany(Book::class, 'favorite')->withTimestamps();
     }
-    
-        public function hasFavorite($book)
-    {
-    Favorite::where('user_id', $this->id)->where('book_id', $book->id)->exists();
-    }
+
+    public function hasFavorite($book)
+{
+    return Favorite::where('user_id', $this->id)->where('book_id', $book->id)->exists();
+}
+
 }

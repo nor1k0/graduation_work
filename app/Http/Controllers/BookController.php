@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Book;
 use Illuminate\Http\Request;
-
+use App\Models\Favorite;
 class BookController extends Controller
 {
     /**
@@ -12,9 +12,17 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Book $book)
+    public function index(Book $book , Favorite $favorite )
     {
     $books = Book::all(); 
+//     $user = auth()->user()->id;
+
+// $favorite_books = DB::table('favorites')
+//         ->select('book_id')
+//         ->where('user_id', '=', $user)
+//         ->get();
+        
+    
     return view('mypage',compact('books'));
         }
 

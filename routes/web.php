@@ -19,7 +19,10 @@ use App\Http\Controllers\ListController;
 
 Route::get('/',[ListController::class,'index'])->name('welcome');;
 Route::get('/manual/{book}',[ListController::class,'show']);
-Route::post('/manual/{book}',[ListController::class, 'favorite'])->name('list.favorite');
+
+Route::post('/manual/{book}/favorite', [ListController::class, 'favorite'])->name('list.favorite');
+Route::delete('/manual/{book}/unfavorite', [ListController::class, 'unfavorite'])->name('list.unfavorite');
+
 
 
 Route::get('/dashboard', function () {

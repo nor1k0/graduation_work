@@ -79,10 +79,8 @@
   @endif
   @endforeach
 </div>
-    
 
 </section>
-
     </div>
     </div>
     </div>

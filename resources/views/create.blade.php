@@ -7,6 +7,11 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('新しいマニュアルの作成') }}
         </h2>
+        <br>
+        <p>★読みやすいマニュアルのポイント★</p>
+        <p>その１：短文(人が1分間に読める文字数は300文字程度)</p>
+        <p>その２：専門用語を使わない(4文字以上のカタカナ・漢字は要注意)</p>
+        <p>その３：写真・画像は必須</p>
     </x-slot>
     <!--ヘッダー[END]-->
             
@@ -76,7 +81,7 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        画像　※必須
                       </label>
-                      <input name="s1_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
+                      <input name="s1_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file" required>
                     </div>
                     
                      <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>
@@ -103,7 +108,7 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        画像　※必須
                       </label>
-                      <input name="s2_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
+                      <input name="s2_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file" required>
                     </div>
                     
                      <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>
@@ -130,7 +135,7 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        画像　※必須
                       </label>
-                      <input name="s3_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file">
+                      <input name="s3_img" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="file" required>
                     </div>
                     
                     <!-- <div  style="border: 2px solid #c0c0c0; margin: 15px"></div>-->

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Favorite;
 
 class Book extends Model
 {
@@ -15,10 +16,14 @@ class Book extends Model
     's5_title','s5_title','s5_img','s5_img_name',
     'flag_open','favorite','user_id'
     ]; //これを追加！
+
     
     public function favorite()
     {
-        return $this->belongsToMany(User::class, 'favorite')->withTimestamps();
+         return $this->belongsToMany(User::class, 'favorites')->withTimestamps();
         // return $this->belongsToMany(User::class, 'favorite', 'user_id', 'favorite_id')->withTimestamps();
+        // return $this->hasMany(Favorite::class);
     }
+    
+    
 }

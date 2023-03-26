@@ -11,7 +11,7 @@
     <div class="flex-1 text-gray-700 text-left bg-blue-100 px-4 py-2 m-2">
      <div id="timer"></div>
     
-    <<div class="w-full max-w-lg">
+    <div class="w-full max-w-lg">
     @method('PATCH')
      @csrf
          <label class="block uppercase tracking-wide text-gray-700 text-4xl font-bold mb-2" style="font-size: 4rem;">
@@ -20,10 +20,10 @@
         <div class="flex flex-wrap -m-4" style="display: flex;">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s1_img)}}" alt="No image"style="width:250px;height:auto">
+          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s1_img)}}" alt="No image"style="width:250px;height:auto;margin-top: 20px;">
         </div>
       </div>
-      <div class="p-4 md:w-1/3" style="margin-left: 50px;">
+      <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ1</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s1_title}}</h1>
@@ -38,7 +38,7 @@
           <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s2_img)}}" alt="No image"style="width:250px;height:auto">
         </div>
       </div>
-      <div class="p-4 md:w-1/3" style="margin-left: 50px;">
+      <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ2</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s2_title}}</h1>
@@ -50,10 +50,10 @@
       <div class="flex flex-wrap -m-4" style="display: flex;">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s3_img)}}" alt="No image"style="width:250px;height:auto">
+          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s3_img)}}" alt="No image"style="width:250px;height:auto;margin-top: 20px;">
         </div>
       </div>
-      <div class="p-4 md:w-1/3" style="margin-left: 50px;">
+      <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
             <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ3</h2>
             <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s3_title}}</h1>
@@ -66,7 +66,7 @@
       <div class="flex flex-wrap -m-4" style="display: flex;">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s4_img)}}" alt="No image"style="width:250px;height:auto">
+          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s4_img)}}" alt="No image"style="width:250px;height:auto;margin-top: 20px;">
         </div>
       </div>
       <div class="p-4 md:w-1/3">
@@ -96,16 +96,27 @@
       </div>
       @endif
     
-    
-    <form method="POST" action="{{ route('list.favorite', ['book' => $book->id]) }}">   
-    @csrf
-     <button type="submit" class="btn btn-primary">
-    いいね
-    </button>
+    @if (auth()->check())
+    @if (auth()->user()->hasFavorite($book))
+    <form action="{{ route('list.unfavorite', $book) }}" method="POST" style="margin-top: 20px;">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-danger">いいねを取り消す</button>
     </form>
+@else
+    <form action="{{ route('list.favorite', $book) }}" method="POST" style="margin-top: 20px;">
+        @csrf
+        <button type="submit" class="btn btn-primary">いいね</button>
+    </form>
+@endif
+@else
+    <p>ログインをするとマニュアルにいいねが出来ます。</p>
+    <button onclick="location.href='/login'" class="btn btn-primary">ログイン</button>
+@endif
+
+    
     </div>
-    
-    
+
     </div>
     <!--右側エリア[[END]--> 
     
