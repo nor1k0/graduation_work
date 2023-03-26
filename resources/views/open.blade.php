@@ -111,7 +111,7 @@
 @endif
 @else
     <p>ログインをするとマニュアルにいいねが出来ます。</p>
-    <button onclick="location.href='/login'" class="btn btn-primary">ログイン</button>
+    <button onclick="location.href='/prd/login'" class="btn btn-primary">ログイン</button>
 @endif
 
     
