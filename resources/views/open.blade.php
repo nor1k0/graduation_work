@@ -14,7 +14,7 @@
     <div class="w-full max-w-lg">
     @method('PATCH')
      @csrf
-         <label class="block uppercase tracking-wide text-gray-700 text-4xl font-bold mb-2" style="font-size: 4rem;">
+         <label class="block uppercase tracking-wide text-gray-700 text-4xl font-bold mb-2" style="font-size: 3rem;">
       {{$book->title}}
         </label>
         <div class="flex flex-wrap -m-4" style="display: flex;">
@@ -25,8 +25,8 @@
       </div>
       <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ1</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s1_title}}</h1>
+            <h1 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ1</h1>
+            <h2 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s1_title}}</h2>
             <p class="leading-relaxed mb-3">{{$book->s1_body}}</p>
         </div>
       </div>
@@ -35,13 +35,13 @@
     <div class="flex flex-wrap -m-4" style="display: flex;">
          <div class="p-4 md:w-2/3">
         <div class="h-25 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s2_img)}}" alt="No image"style="width:250px;height:auto">
+          <img class="lg:m md:h-36 w-25 object-cover object-center" src="{{asset($book->s2_img)}}" alt="No image"style="width:250px;height:auto;margin-top: 20px;">
         </div>
       </div>
       <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ2</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s2_title}}</h1>
+            <h1 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ2</h1>
+            <h2 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s2_title}}</h2>
             <p class="leading-relaxed mb-3">{{$book->s2_body}}</p>
         </div>
       </div>
@@ -55,8 +55,8 @@
       </div>
       <div class="p-4 md:w-1/3" style="margin-left: 50px;width: 70%;">
             <div class="p-6">
-            <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ3</h2>
-            <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s3_title}}</h1>
+            <h1 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">ステップ3</h1>
+            <h2 class="title-font text-lg font-medium text-gray-900 mb-3">{{$book->s3_title}}</h2>
             <p class="leading-relaxed mb-3">{{$book->s3_body}}</p>
         </div>
       </div>
