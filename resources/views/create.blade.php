@@ -100,7 +100,7 @@
                       <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                        本文
                       </label>
-                      <input id="s2_body"　name="s2_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
+                      <input id="s2_body" name="s2_body" class="appearance-none block w-full text-gray-700 border border-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" type="text" placeholder="" maxlength="200">
                     <span id="s2_counter"></span>
                     </div>
                      <!-- カラム3 -->
