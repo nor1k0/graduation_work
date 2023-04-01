@@ -17,7 +17,7 @@ class ListController extends Controller
 //      */
     public function index(Request $request , Favorite $favorite) {
         if($request->search) {
-            $books = Book::where('title', '=', $request->search)->get();
+            $books = Book::where('title', 'LIKE', '%'.$request->search.'%')->get();
         } else {
             $books = Book::all();
         }    
